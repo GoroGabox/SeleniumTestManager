@@ -28,5 +28,5 @@ Este repositorio contiene un framework de pruebas automatizadas desarrollado en 
 ## Configuración
 1. Clona el repositorio:
    ```bash
-   git clone https://github.com/tu-usuario/tu-repositorio.git
+   git clone https://github.com/tu-usuario/tu-repositorio.git](https://github.com/GoroGabox/SeleniumTestManager.git
    cd tu-repositorio
