@@ -69,60 +69,60 @@ namespace SeleniumTestManager.Pages
 
 
 
-        IWebElement btnOS => driver.FindElement(locator_OSLink);
-        IWebElement btnCrear_OS => driver.FindElement(locator_CrearOSLink);
-        IWebElement inputCustomer => driver.FindElement(locator_InputCustomer);
-        IWebElement itemCustomer => driver.FindElement(locator_ItemCustomer);
-        IWebElement inputSeller => driver.FindElement(locator_InputSeller);
-        IWebElement selectorServiceType => driver.FindElement(locator_SelectorServiceType);
-        IWebElement itemServiceType => driver.FindElement(locator_ItemServiceType);
+        IWebElement BtnOS => driver.FindElement(locator_OSLink);
+        IWebElement BtnCrear_OS => driver.FindElement(locator_CrearOSLink);
+        IWebElement InputCustomer => driver.FindElement(locator_InputCustomer);
+        IWebElement ItemCustomer => driver.FindElement(locator_ItemCustomer);
+        IWebElement InputSeller => driver.FindElement(locator_InputSeller);
+        IWebElement SelectorServiceType => driver.FindElement(locator_SelectorServiceType);
+        IWebElement ItemServiceType => driver.FindElement(locator_ItemServiceType);
         
-        IWebElement selectorOperation => driver.FindElement(locator_SelectorOperation);
-        IWebElement itemOperation => driver.FindElement(locator_ItemOperation);
-        IWebElement inputShip => driver.FindElement(locator_InputShips);
-        IWebElement inputTotal => driver.FindElement(locator_InputTotal);
-        IWebElement btnAgregarDocumento => driver.FindElement(locator_AgregarDocumento);
-        IWebElement btnEliminarDocumento => driver.FindElement(locator_EliminarDocumento);
-        IWebElement btnAceptarEliminarDocumento => driver.FindElement(locator_aceptarEliminarDocumento);
-        IWebElement btnCancelarEliminarDocumento => driver.FindElement(locator_cancelarEliminarDocumento);
-        IWebElement selectorPrimerDocumento => driver.FindElement(locator_PrimerDocumento);
+        IWebElement SelectorOperation => driver.FindElement(locator_SelectorOperation);
+        IWebElement ItemOperation => driver.FindElement(locator_ItemOperation);
+        IWebElement InputShip => driver.FindElement(locator_InputShips);
+        IWebElement InputTotal => driver.FindElement(locator_InputTotal);
+        IWebElement BtnAgregarDocumento => driver.FindElement(locator_AgregarDocumento);
+        IWebElement BtnEliminarDocumento => driver.FindElement(locator_EliminarDocumento);
+        IWebElement BtnAceptarEliminarDocumento => driver.FindElement(locator_aceptarEliminarDocumento);
+        IWebElement BtnCancelarEliminarDocumento => driver.FindElement(locator_cancelarEliminarDocumento);
+        IWebElement SelectorPrimerDocumento => driver.FindElement(locator_PrimerDocumento);
         IWebElement ItemDocumentoSeleccionado => driver.FindElement(locator_DocumentoSeleccionado);
         IWebElement ItemTipoDocumentoSeleccionado => driver.FindElement(locator_TipoDocumentoSeleccionado);
         IWebElement CheckBoxDocumentoSeleccionado => driver.FindElement(locator_CheckBoxDocumentoSeleccionado);
 
-        IWebElement btnAgregarOrdenVenta => driver.FindElement(locator_agregarOrdenVenta);
-        IWebElement selectorTipoServicio => driver.FindElement(locator_tipoServicio);
-        IWebElement itemServicio => driver.FindElement(locator_itemServicio);
-        IWebElement selectorTipoCarga => driver.FindElement(locator_tipoCarga);
-        IWebElement itemCarga => driver.FindElement(locator_itemCarga);
-        IWebElement selectorTipoSubServicio => driver.FindElement(locator_tipoSubServicio);
-        IWebElement itemSubServicio => driver.FindElement(locator_itemSubServicio);
-        IWebElement selectorComodity => driver.FindElement(locator_comodity);
-        IWebElement inputTramo => driver.FindElement(locator_tramo);
-        IWebElement checkboxTarifaUnitaria => driver.FindElement(locator_tarifaUnitaria);
-        IWebElement checkboxTarifaPorcentaje => driver.FindElement(locator_tarifaPorcentaje);
-        IWebElement selectorIMO => driver.FindElement(locator_IMO);
-        IWebElement itemIMO => driver.FindElement(locator_itemIMO);
-        IWebElement selectorUnidad => driver.FindElement(locator_unidad);
-        IWebElement itemUnidad => driver.FindElement(locator_itemUnidad);
-        IWebElement selectorMonedaVenta => driver.FindElement(locator_monedaVenta);
-        IWebElement itemMonedaVenta => driver.FindElement(locator_itemMonedaVenta);
-        IWebElement inputMonedaCantidad => driver.FindElement(locator_monedaCantidad);
-        IWebElement labelMonedaCantidad => driver.FindElement(locator_labelMonedaCantidad);
+        IWebElement BtnAgregarOrdenVenta => driver.FindElement(locator_agregarOrdenVenta);
+        IWebElement SelectorTipoServicio => driver.FindElement(locator_tipoServicio);
+        IWebElement ItemServicio => driver.FindElement(locator_itemServicio);
+        IWebElement SelectorTipoCarga => driver.FindElement(locator_tipoCarga);
+        IWebElement ItemCarga => driver.FindElement(locator_itemCarga);
+        IWebElement SelectorTipoSubServicio => driver.FindElement(locator_tipoSubServicio);
+        IWebElement ItemSubServicio => driver.FindElement(locator_itemSubServicio);
+        IWebElement SelectorComodity => driver.FindElement(locator_comodity);
+        IWebElement InputTramo => driver.FindElement(locator_tramo);
+        IWebElement CheckboxTarifaUnitaria => driver.FindElement(locator_tarifaUnitaria);
+        IWebElement CheckboxTarifaPorcentaje => driver.FindElement(locator_tarifaPorcentaje);
+        IWebElement SelectorIMO => driver.FindElement(locator_IMO);
+        IWebElement ItemIMO => driver.FindElement(locator_itemIMO);
+        IWebElement SelectorUnidad => driver.FindElement(locator_unidad);
+        IWebElement ItemUnidad => driver.FindElement(locator_itemUnidad);
+        IWebElement SelectorMonedaVenta => driver.FindElement(locator_monedaVenta);
+        IWebElement ItemMonedaVenta => driver.FindElement(locator_itemMonedaVenta);
+        IWebElement InputMonedaCantidad => driver.FindElement(locator_monedaCantidad);
+        IWebElement LabelMonedaCantidad => driver.FindElement(locator_labelMonedaCantidad);
 
-        IWebElement tarifario => driver.FindElement(locator_tarifario);
-        IWebElement solicitarNuevaTarifa => driver.FindElement(locator_solicitarNuevaTarifa);
-        IWebElement asignarTarifa => driver.FindElement(locator_asignarTarifa);
-        IWebElement cancelarTarifa => driver.FindElement(locator_cancelarTarifa);
+        IWebElement Tarifario => driver.FindElement(locator_tarifario);
+        IWebElement SolicitarNuevaTarifa => driver.FindElement(locator_solicitarNuevaTarifa);
+        IWebElement AsignarTarifa => driver.FindElement(locator_asignarTarifa);
+        IWebElement CancelarTarifa => driver.FindElement(locator_cancelarTarifa);
 
-        IWebElement inputElement => driver.FindElement(locator_elemento);
+        IWebElement InputElement => driver.FindElement(locator_elemento);
 
         public void CrearOS()
         {
             wait.Until(ExpectedConditions.ElementIsVisible(locator_OSLink));
-            btnOS.Click();
+            BtnOS.Click();
             wait.Until(ExpectedConditions.ElementIsVisible(locator_CrearOSLink));
-            btnCrear_OS.Click();
+            BtnCrear_OS.Click();
         }
 
         public void FillHeader(string customer, string seller, string ship, string total)
@@ -132,72 +132,73 @@ namespace SeleniumTestManager.Pages
             //wait.Until(ExpectedConditions.ElementIsVisible(locator_ItemServiceType));
             //itemServiceType.Click();
 
-            selectorServiceType.ClickIndexFromList(driver, wait, 0);
+            SelectorServiceType.ClickIndexFromList(0);
 
             wait.Until(ExpectedConditions.ElementIsVisible(locator_SelectorOperation));
-            selectorOperation.Click();
+            SelectorOperation.Click();
             wait.Until(ExpectedConditions.ElementIsVisible(locator_ItemOperation));
-            itemOperation.Click();
+            ItemOperation.Click();
 
             wait.Until(ExpectedConditions.ElementIsVisible(locator_InputCustomer));
-            inputCustomer.Click();
-            inputCustomer.EnterText(customer);
+            InputCustomer.Click();
+            InputCustomer.EnterText(customer);
             wait.Until(ExpectedConditions.ElementIsVisible(locator_ItemCustomer));
-            itemCustomer.Click();
+            ItemCustomer.Click();
 
-            inputSeller.Click();
-            inputSeller.EnterText(seller);
+            InputSeller.Click();
+            InputSeller.EnterText(seller);
 
-            inputShip.Click();
-            inputShip.EnterText(ship);
+            InputShip.Click();
+            InputShip.EnterText(ship);
 
-            inputTotal.Click();
-            inputTotal.EnterText(total);
+            InputTotal.Click();
+            InputTotal.EnterText(total);
 
-            btnAgregarDocumento.Click();
+            BtnAgregarDocumento.Click();
 
             wait.Until(ExpectedConditions.ElementIsVisible(locator_PrimerDocumento));
-            selectorPrimerDocumento.Click();
+            SelectorPrimerDocumento.Click();
 
             wait.Until(ExpectedConditions.ElementIsVisible(locator_DocumentoSeleccionado));
             ItemDocumentoSeleccionado.Click();
 
             CheckBoxDocumentoSeleccionado.Click();
 
-            btnEliminarDocumento.Click();
+            BtnEliminarDocumento.Click();
 
             wait.Until(ExpectedConditions.ElementIsVisible(locator_cancelarEliminarDocumento));
-            btnCancelarEliminarDocumento.Click();
+            BtnCancelarEliminarDocumento.Click();
 
-            btnEliminarDocumento.Click();
+            BtnEliminarDocumento.Click();
 
             wait.Until(ExpectedConditions.ElementIsVisible(locator_aceptarEliminarDocumento));
-            btnAceptarEliminarDocumento.Click();
+            BtnAceptarEliminarDocumento.Click();
         }
 
         public void FillOV()
         {
             wait.Until(ExpectedConditions.ElementIsVisible(locator_agregarOrdenVenta));
-            btnAgregarOrdenVenta.Click();
+            BtnAgregarOrdenVenta.Click();
 
             // wait.Until(ExpectedConditions.ElementIsVisible(locator_tipoServicio));
             // selectorTipoServicio.Click();
 
             // wait.Until(ExpectedConditions.ElementIsVisible(locator_itemServicio));
             // itemServicio.Click();
-            ((IJavaScriptExecutor)driver).ExecuteScript("arguments[0].scrollIntoView(true);", selectorTipoSubServicio);
+
+            driver.ScrollToLocator(SelectorTipoSubServicio);
 
             wait.Until(ExpectedConditions.ElementIsVisible(locator_tipoSubServicio));
-            selectorTipoSubServicio.Click();
+            SelectorTipoSubServicio.Click();
 
             wait.Until(ExpectedConditions.ElementIsVisible(locator_itemSubServicio));
-            itemSubServicio.Click();
+            ItemSubServicio.Click();
 
             wait.Until(ExpectedConditions.ElementIsVisible(locator_tipoCarga));
-            selectorTipoCarga.Click();
+            SelectorTipoCarga.Click();
 
             wait.Until(ExpectedConditions.ElementIsVisible(locator_itemCarga));
-            itemCarga.Click();
+            ItemCarga.Click();
 
             // wait.Until(ExpectedConditions.ElementIsVisible(locator_comodity));
             // selectorComodity.Click();
@@ -206,22 +207,22 @@ namespace SeleniumTestManager.Pages
             // inputTramo.+EnterText("");
 
             wait.Until(ExpectedConditions.ElementIsVisible(locator_tarifaUnitaria));
-            checkboxTarifaUnitaria.Click();
+            CheckboxTarifaUnitaria.Click();
 
             // wait.Until(ExpectedConditions.ElementIsVisible(locator_tarifaPorcentaje));
             // checkboxTarifaPorcentaje.Click();
 
             wait.Until(ExpectedConditions.ElementIsVisible(locator_IMO));
-            selectorIMO.Click();
+            SelectorIMO.Click();
 
             wait.Until(ExpectedConditions.ElementIsVisible(locator_itemIMO));
-            itemIMO.Click();
+            ItemIMO.Click();
 
             wait.Until(ExpectedConditions.ElementIsVisible(locator_unidad));
-            selectorUnidad.Click();
+            SelectorUnidad.Click();
 
             wait.Until(ExpectedConditions.ElementIsVisible(locator_itemUnidad));
-            itemUnidad.Click();
+            ItemUnidad.Click();
 
             // wait.Until(ExpectedConditions.ElementIsVisible(locator_monedaVenta));
             // selectorMonedaVenta.Click();
@@ -230,36 +231,14 @@ namespace SeleniumTestManager.Pages
             // itemMonedaVenta.Click();
 
             wait.Until(ExpectedConditions.ElementIsVisible(locator_monedaCantidad));
-            inputMonedaCantidad.Click();
-            labelMonedaCantidad.Click();
+            InputMonedaCantidad.Click();
+            LabelMonedaCantidad.Click();
         }
 
         public void AgregarTarifa()
         {
-            tarifario.Click();
-            asignarTarifa.Click();
-        }
-
-        public void SelectServiceType(int index)
-        {
-            // Haz clic en el selector para desplegar las opciones
-            wait.Until(ExpectedConditions.ElementIsVisible(locator_SelectorServiceType));
-            selectorServiceType.Click();
-
-            // Encuentra todos los elementos que coinciden con ItemServiceType
-            wait.Until(ExpectedConditions.ElementIsVisible(locator_ItemsServiceType));
-            var serviceTypeItems = driver.FindElements(locator_ItemsServiceType);
-
-            // Verifica que el índice sea válido
-            if (index >= 0 && index < serviceTypeItems.Count)
-            {
-                // Haz clic en el elemento que corresponde al índice dado
-                serviceTypeItems[index].Click();
-            }
-            else
-            {
-                throw new ArgumentOutOfRangeException($"Índice {index} fuera de rango. Hay {serviceTypeItems.Count} elementos disponibles.");
-            }
+            Tarifario.Click();
+            AsignarTarifa.Click();
         }
     }
 }

@@ -1,4 +1,6 @@
 ﻿using ClosedXML.Excel;
+using CsvHelper.Configuration;
+using CsvHelper;
 using DocumentFormat.OpenXml.Bibliography;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.InkML;
@@ -9,10 +11,12 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.DevTools;
 using OpenQA.Selenium.Support.UI;
 using SeleniumExtras.WaitHelpers;
+using SeleniumTestManager.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.Common;
 using System.Diagnostics;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -75,7 +79,7 @@ namespace SeleniumTestManager
             return options;
         }
 
-        public static void ClickIndexFromList(this IWebElement listElement, IWebDriver driver, WebDriverWait wait, int index)
+        public static void ClickIndexFromList(this IWebElement listElement, int index)
         {
             listElement.Click();
 
@@ -163,6 +167,11 @@ namespace SeleniumTestManager
                 worksheet.Cell(lastRow + 1, 8).Value = environment;
                 workbook.Save();
             }
+        }
+    
+        public static void ScrollToLocator(this IWebDriver driver, IWebElement element) 
+        {
+            ((IJavaScriptExecutor)driver).ExecuteScript("arguments[0].scrollIntoView(true);", element);
         }
     }    
 }

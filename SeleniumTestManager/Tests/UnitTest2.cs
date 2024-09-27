@@ -1,4 +1,4 @@
-using CsvHelper.Configuration;
+ï»¿using CsvHelper.Configuration;
 using CsvHelper;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
@@ -17,7 +17,7 @@ using ClosedXML;
 
 namespace SeleniumTestManager.Tests
 {
-    public class Tests
+    public class UnitTest2
     {
         private IWebDriver _driver;
         private List<TestResult> _testResults;
@@ -35,49 +35,13 @@ namespace SeleniumTestManager.Tests
         private string _stackTrace;
         private string _environment;
 
-        public static IEnumerable<LoginModel> CSVDataSource(string csvFilePath)
-        {
-            var config = new CsvConfiguration(CultureInfo.InvariantCulture)
-            {
-                Delimiter = ";", // Cambia esto si es necesario
-            };
-            using (var reader = new StreamReader(csvFilePath))
-            using (var csv = new CsvReader(reader, config))
-            {
-                var records = csv.GetRecords<LoginModel>().ToList();
-                foreach (var item in records)
-                {
-                    yield return item;
-                }
-            }
-        }
-
-        public static IEnumerable<LoginModel> ExcelDataSource(string excelFilePath, string sheetName)
-        {
-            using (var workbook = new XLWorkbook(excelFilePath))
-            {
-                var worksheet = workbook.Worksheet(sheetName);
-                var rows = worksheet.RowsUsed().Skip(1); // Asumiendo que la primera fila es el encabezado
-
-                foreach (var row in rows)
-                {
-                    var loginModel = new LoginModel
-                    {
-                        Username = row.Cell(1).GetValue<string>(),
-                        Password = row.Cell(2).GetValue<string>()
-                    };
-
-                    yield return loginModel;
-                }
-            }
-        }
-
         public void TakeScreenShot(string fileName)
         {
             //Guarda una captura de pantalla
             _screenshotFilePath = Path.Combine(_screenshotsFolder, fileName);
             _driver.TakeScreenshot(_screenshotFilePath);
         }
+
 
         [OneTimeSetUp]
         public void OneTimeSetUp()
@@ -128,7 +92,7 @@ namespace SeleniumTestManager.Tests
             _driver = driverInstance.GetDriver();
             _driver.Navigate().GoToUrl(_url);
 
-            // Inicia el cronómetro
+            // Inicia el cronÃ³metro
             _stopwatch = new Stopwatch();
             _stopwatch.Start();
         }
@@ -136,7 +100,7 @@ namespace SeleniumTestManager.Tests
         [TearDown]
         public void TearDown()
         {
-            // Detiene el cronómetro
+            // Detiene el cronÃ³metro
             _stopwatch.Stop();
 
             // Guarda el resultado del test actual
@@ -150,7 +114,7 @@ namespace SeleniumTestManager.Tests
             }
             else
             {
-                _errorMessage = string.Empty; // O algún mensaje por defecto para pruebas exitosas.
+                _errorMessage = string.Empty; // O algÃºn mensaje por defecto para pruebas exitosas.
             }
 
             // Guarda el StackTrace del error
@@ -160,7 +124,7 @@ namespace SeleniumTestManager.Tests
             }
             else
             {
-                _stackTrace = string.Empty; // O algún valor por defecto.
+                _stackTrace = string.Empty; // O algÃºn valor por defecto.
             }
 
             // Escribir los resultados al archivo Excel
@@ -174,16 +138,18 @@ namespace SeleniumTestManager.Tests
         public void RutaCritica()
         {
             //POM Initialization
+
             //Arrange 
             LoginPage loginPage = new LoginPage(_driver);
             CrearOSPage crearOSPage = new CrearOSPage(_driver);
+
             //Act
             TakeScreenShot("screenshot_1.png");
             loginPage.Login("gabriel.diaz_ext", "Gd31z.2024$.");
             TakeScreenShot("screenshot_2.png");
             crearOSPage.CrearOS();
             TakeScreenShot("screenshot_3.png");
-            crearOSPage.FillHeader("85939500-7", "Felipe Retamal Caamaño", "barquito chu chu", "99999");
+            crearOSPage.FillHeader("85939500-7", "Felipe Retamal CaamaÃ±o", "barquito chu chu", "99999");
             TakeScreenShot("screenshot_4.png");
             crearOSPage.FillOV();
             TakeScreenShot("screenshot_5.png");
@@ -193,37 +159,5 @@ namespace SeleniumTestManager.Tests
 
         }
 
-        [Test]
-        public void ExtraerLocalizadoresExcel()
-        {
-            //POM Initialization
-            //Arrange 
-            LoginPageExcel loginPage = new LoginPageExcel(_driver, "CssSelector");
-            //Act
-            loginPage.Login("gabriel.diaz_ext", "Gd31z.2024$.");
-
-            //Assert
-            Assert.Pass();
-        }
-
-        [Test]
-        [Category("ddt")]
-        [TestCaseSource(nameof(CSVDataSource), new object[] { "Login.csv" })] //Nombre del archivo csv
-        public void CargaMasivaCSV(LoginModel loginModel)
-        {
-            LoginPage loginPage = new LoginPage(_driver);
-            loginPage.Login(loginModel.Username, loginModel.Password);
-            Assert.Pass();
-        }
-
-        [Test]
-        [Category("ddt")]
-        [TestCaseSource(nameof(ExcelDataSource), new object[] { "Login.xlsx", "Sheet1" })] //Nombre del archivo xlsx y nombre de la hoja
-        public void CargaMasivaExcel(LoginModel loginModel)
-        {
-            LoginPage loginPage = new LoginPage(_driver);
-            loginPage.Login(loginModel.Username, loginModel.Password);
-            Assert.Pass();
-        }
     }
 }
